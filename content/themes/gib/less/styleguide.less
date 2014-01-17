@@ -1,0 +1,119 @@
+/* Colors
+* ----------------------------------------------------------------- */
+
+@c-active: #014495;
+@c-regular: #000;
+@c-sec: #eb6300;
+@c-third: #f5a700;
+@c-four:#c90420;
+
+
+/* Font Stacks
+* ----------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+
+@body: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@display: 'Cambria W02 Regular', 'Cambria', 'serif';
+@code : Monaco, Courier New, monospace;
+
+/* Elements
+* ----------------------------------------------------------------- */
+
+a.button-link {
+    display:block;
+    color: @white !important;
+}
+
+.content-button {
+    padding:10px;
+    text-align:center;
+    .border-radius(5px);
+    .box-shadow(0px 2px 2px rgba(0,0,0,0.25));
+    text-shadow:0 -1px 0 rgba(0,0,0,0.2);
+    color: @white !important;
+    .hand();
+    margin-bottom:10px;
+    &:hover {
+        .box-shadow(0px 1px 2px rgba(0,0,0,0.25));
+    }
+
+}
+
+.orange {
+    .gradientBar((@c-sec + #222), @c-sec);
+    &:hover {
+        .gradientBar((@c-sec + #333), @c-sec + #111);
+    }
+}
+
+.blue {
+    .gradientBar((@c-active + #222), @c-active);
+    &:hover {
+        .gradientBar((@c-active + #333), @c-active + #111);
+    }
+}
+
+.lightgray {
+    .gradientBar(#f2f2f2, #ddd);
+    text-shadow:0 1px 0 rgba(255,255,255,1) !important;
+    color: @c-regular !important;
+    &:hover {
+        .gradientBar(#f2f2f2, #ddd + #111);
+    }
+}
+
+.silver {
+    .gradientBar(#ddd, #ddd - #111);
+    text-shadow:0 1px 0 rgba(255,255,255,1) !important;
+    color: @c-regular !important;
+    &:hover {
+        .gradientBar(#ddd + #111, #ddd);
+    }
+}
+
+
+a.button {
+
+    display: inline-block;
+    padding: 10px;
+    background-color: #EB6300;
+    /*.gradientBar((@c-sec + #222), @c-sec);*/
+    /*text-shadow:0 -1px 0 rgba(0,0,0,0.2);*/
+    color: @white !important;
+    /*.box-shadow(0px 2px 2px rgba(0,0,0,0.25));*/
+    .border-radius(5px);
+    margin: 0 20px 0px 0; /* cleaner execution */
+
+    &:hover {
+        .gradientBar((@c-sec + #333), @c-sec + #111);
+        /*.box-shadow(0px 1px 2px rgba(0,0,0,0.25));*/
+    }
+
+    span.submission-form {
+        padding-left:20px;
+        background: url("@{themeurl}/images/icon-form.png") no-repeat 0 0;
+    }
+
+    .hand();
+
+}
+
+input[type=submit].button {
+
+    display:inline-block;
+    padding:10px;
+    .gradientBar(#ddd, #ddd - #111);
+    text-shadow:0 1px 0 rgba(255,255,255,1);
+    color: @c-regular !important;
+    .box-shadow(0px 2px 2px rgba(0,0,0,0.25));
+    margin: 0 20px 20px 0; /* cleaner execution */
+    border:0;
+
+    &:hover {
+        .gradientBar(#ddd + #111, #ddd);
+        .box-shadow(0px 1px 2px rgba(0,0,0,0.25));
+    }
+
+    .hand();
+
+}

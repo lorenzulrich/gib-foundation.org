@@ -1,0 +1,15 @@
+wp-config.php
+
+/new
+/tmp
+.idea
+/.DS_Store 
+/wordpress/wp-content__delete
+
+/content/cache
+/content/uploads
+/content/upgrade
+/content/themes/globalenergybasel
+/content/themes/twentyfourteen
+/content/plugins-temp__delete
+/content/backup-e4bd2

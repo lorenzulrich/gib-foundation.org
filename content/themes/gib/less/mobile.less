@@ -1,0 +1,118 @@
+@media all and (max-width: 480px) {
+
+    /* Hide */
+
+    .top-navigation,
+    #site-header,
+    #sub-navigation,
+    .footer-navigation {
+        display:none;
+    }
+
+  .slider-wrap {
+    height: 100px !important;
+
+    ul#slider-container {
+      height: 100px !important;
+
+      li {
+        height:100px !important;
+      }
+    }
+
+    #slide-caption-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+
+
+    /* General */
+
+    img {
+        max-width:100%;
+    }
+
+    /* Top Box */
+
+    #mobile-header {
+        display:block !important;
+        min-height:77px;
+        padding:10px 0;
+        background-color: #f8f8f8;
+    }
+
+    h1.mobile-site-title {
+        width: 110px; height: 77px;
+        background: url("@{themeurl}/images/logo_gib.svg");
+        background-size: 100%;
+        text-indent: -9999px;
+        margin:0 auto;
+    }
+
+    #nav-mobile-toggle {
+        display:block !important;
+        background:@c-active;
+        border-bottom:1px solid rgba(0,0,0,0.1);
+        color:#fff;
+        padding:10px 0;
+        text-align:center;
+        .hand();
+
+        span {
+            padding-left:22px;
+            background: transparent url("@{themeurl}/images/nav_top.png") no-repeat 0 0;
+        }
+
+
+    }
+
+    #nav-mobile-container {
+
+        display:none;
+        background:@c-active;
+        text-shadow:0 -1px 0 rgba(0,0,0,0.2);
+
+        a,
+        a:visited,
+        a:hover,
+        a:focus,
+        a:active {
+            color:@white;
+        }
+
+    }
+
+    /* Home */
+
+    .mobile-slide {
+        display:block !important;
+    }
+
+    /* Page */
+
+    .sub-page {
+        border:none !important;
+        padding-top:0 !important;
+    }
+
+    .half_col, .third_col {
+        width:100% !important;
+        margin-right: 0% !important;
+    }
+
+    .col-66 {
+      float: none;
+      width: 100%;
+      margin-right: 0%;
+    }
+
+    .col-33 {
+      float: none;
+      width: 100%;
+    }
+
+}
