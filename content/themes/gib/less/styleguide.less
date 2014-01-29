@@ -38,22 +38,18 @@ a.button-link {
 }
 
 .orange {
-    .gradientBar((@c-sec + #222), @c-sec);
     &:hover {
         .gradientBar((@c-sec + #333), @c-sec + #111);
     }
 }
 
 .blue {
-    .gradientBar((@c-active + #222), @c-active);
     &:hover {
         .gradientBar((@c-active + #333), @c-active + #111);
     }
 }
 
 .lightgray {
-    .gradientBar(#f2f2f2, #ddd);
-    text-shadow:0 1px 0 rgba(255,255,255,1) !important;
     color: @c-regular !important;
     &:hover {
         .gradientBar(#f2f2f2, #ddd + #111);
@@ -61,8 +57,6 @@ a.button-link {
 }
 
 .silver {
-    .gradientBar(#ddd, #ddd - #111);
-    text-shadow:0 1px 0 rgba(255,255,255,1) !important;
     color: @c-regular !important;
     &:hover {
         .gradientBar(#ddd + #111, #ddd);
