@@ -1,3 +1,5 @@
+var interval = null;
+
 jQuery(document).ready(function($){
     /*
     ___________________________________________________________
@@ -20,12 +22,16 @@ jQuery(document).ready(function($){
         var $slideNavigation = $('.slide-navigation', '.slide-active');
 
         var slideNav = '';
+        var slideCount = 0;
         $.each($allSlides, function(e) {
+            slideCount++;
             var $element = $(this);
             var elementClass = $element.attr('class') == 'slide-active' ? 'class="active slide-select"' : 'class="slide-select"';
             slideNav = slideNav + '<a data-target="' + $element.attr('id') + '" ' + elementClass + '>■</a>';
         });
         $slideNavigation.html(slideNav);
+        sliderAutoplay();
+
     }
 
     function bindSlideNavigation() {
@@ -40,11 +46,35 @@ jQuery(document).ready(function($){
         });
     }
 
+    function sliderAutoplay() {
+        clearTimeout(interval);
+        interval = setTimeout(sliderAutoplayStart, 10000)
+    }
+
+    function sliderAutoplayStart() {
+        clearTimeout(interval);
+        //console.log('start');
+        var $current = $('.active', '.slide-active');
+        var $next = $current.next().length ? $current.next() : $current.parent().children().eq(0);
+        $next.trigger('click');
+    }
+
+    function sliderAutoplayStop() {
+        //console.log('stop');
+        clearTimeout(interval);
+    }
+
+    $('.slider-wrap').hover(
+        function() {
+            sliderAutoplayStop();
+        },
+        function() {
+            sliderAutoplay();
+        }
+    );
+
     buildSlideNavigation();
     bindSlideNavigation();
-
-
-
 
     /*
      -----------------------------------------------------------
